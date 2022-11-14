@@ -1,7 +1,7 @@
 <?php
-    require '../include/Flight/flight/Flight.php';
-    require '../include/Smarty/libs/Smarty.class.php';
-    require '../include/pdo.php';
+    require './include/Flight/flight/Flight.php';
+    require './include/Smarty/libs/Smarty.class.php';
+    require './include/pdo.php';
     require './routes.php';
 
     Flight::set('conn', $conn);
