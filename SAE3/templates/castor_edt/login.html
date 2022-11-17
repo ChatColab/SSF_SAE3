@@ -3,5 +3,32 @@
 {% load crispy_forms_tags %}
 
 {% block main %}
-    Login
+<div class="login-page gradient-background page">
+    <form class="login-form form" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        <h2>Connexion</h2>
+        <p>Pour vous connecter, veuillez utiliser vos identifiants UPJV.</p>
+
+        <div class="fields">
+            <div class="labels">
+                <label for="user">Identifiant</label>
+                <label for="psw">Mot de passe</label>
+            </div>
+    
+            <div class="inputs">
+                <input type="text" name="username" id="user" placeholder="Username" required autofocus>
+                <input type="password" name="password" id="psw" placeholder="Password" required>
+            </div>
+        </div>
+
+        <div class="btn-wrapper">
+            <button class="submit-btn" type="submit">
+                Connexion
+                <span></span><span></span><span></span><span></span>
+            </button>
+        </div>
+    </form>
+</div>
+
 {% endblock %}
